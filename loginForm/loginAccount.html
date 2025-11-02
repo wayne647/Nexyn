@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexyn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="loginAccount.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-[#f1f3f4] via-[#adb5bd] to-[#495057] flex items-center justify-center p-4">
+    <div class="form-container bg-[#fbfbf9] w-full max-w-md rounded-xl border border-white overflow-hidden">
+        <div class="p-8">
+            <div class="text-center mb-8">
+                <h1 class="text-2xl font-bold text-gray-800">Login your Account</h1>
+                <p class="text-gray-600 mt-2">Log in your Account now</p>
+            </div>
+            
+            <form id="loginForm" class="space-y-6">
+                <div>
+                    <label for="email" class="block text-gray-700 mb-2 font-medium">Email Address</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-envelope text-gray-400"></i>
+                        </div>
+                        <input type="email" id="email" name="email" class="input-field w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors" placeholder="Enter your email">
+                    </div>
+                    <div id="emailError" class="error-message text-red-500 text-sm mt-1"></div>
+                </div>
+                <div>
+                    <label for="password" class="block text-gray-700 mb-2 font-medium">Password</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-lock text-gray-400"></i>
+                        </div>
+                        <input type="password" id="password" name="password" class="input-field w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors" placeholder="Enter your password">
+                        <button type="button" id="togglePassword" class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                            <i class="fas fa-eye text-gray-400 hover:text-gray-600 outline-none"></i>
+                        </button>
+                    </div>
+                    <div id="passwordError" class="error-message text-red-500 text-sm mt-1"></div>
+                </div>
+                <button 
+                    type="submit" 
+                    class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50">Login</button>
+                <div class="text-center">
+                    <a href="../index.html" class="text-gray-600 hover:text-gray-800 text-sm">
+                        Don't have a account yet? <span class='font-medium underline'>Register here</span>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+<script src="loginAccount.js"></script>
+</body>
+</html>
