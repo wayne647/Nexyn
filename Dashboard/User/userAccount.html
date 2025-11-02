@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexyn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="userAccount.css">
+    </head>
+<body class="min-h-screen bg-gray-100 font-['Poppins']">
+<nav class="bg-white shadow-lg relative">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+            <h1 class="text-2xl font-bold text-gray-800">Nexyn</h1>
+            <div class="flex items-center space-x-4">
+                <div class="profile-dropdown">
+                    <button id="profileDropdownBtn" class="flex items-center space-x-3 bg-gray-100 hover:bg-gray-200 rounded-full px-4 py-2 transition-colors cursor-pointer">
+                        <span class="text-black font-semibold text-sm" id="profileInitial">U</span>
+                    </button>
+                    <div id="dropdownMenu" class="dropdown-menu">
+                        <div class="px-4 py-3 border-b border-gray-100">
+                        </div>
+                        <a href="#" class="dropdown-item" onclick="openSettings()">
+                            <i class="fas fa-cog text-gray-400"></i>
+                            Settings
+                        </a>
+                        <a href="#" class="dropdown-item" onclick="logout()">
+                            <i class="fas fa-sign-out-alt text-gray-400"></i>
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section id="home" class="bg-gradient-to-br from-[#f1f3f4] via-[#adb5bd] to-[#495057] text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 text-black">Nexyn Game hosting</h1>
+                <p class="text-xl mb-8 text-black">High-performance Minecraft and SA-MP server hosting with 99.9% uptime, DDoS protection, and instant setup.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button class="bg-blue-700 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Get Started</button>
+                    <button class="bg-blue-700 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg border border-blue-500 transition duration-300">View Plans</button>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+            </div>
+        </div>
+    </div>
+</section>
+    </section>
+    <section id="minecraft" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Minecraft Server Hosting</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Powerful, lag-free Minecraft hosting with one-click modpack installation and automatic backups.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="plan-card bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Bronze Plan</h3>
+                    <div class="price text-4xl font-bold text-gray-900 mb-6">₱100<span class="text-lg text-gray-500">/month</span></div>
+                    <ul class="features space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>1GB RAM</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>10 Player Slots</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Basic Support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>24/7 Uptime</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Automatic Backups</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-4 rounded-lg transition duration-300">Select Plan</button>
+                </div>
+                <div class="plan-card bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Silver Plan</h3>
+                    <div class="price text-4xl font-bold text-gray-900 mb-6">₱300<span class="text-lg text-gray-500">/month</span></div>
+                    <ul class="features space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>4GB RAM</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>30 Player Slots</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Priority Support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>24/7 Uptime</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Automatic Backups</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>DDoS Protection</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-4 rounded-lg transition duration-300">Select Plan</button>
+                </div>
+                
+                <div class="plan-card bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Gold Plan</h3>
+                    <div class="price text-4xl font-bold text-gray-900 mb-6">₱500<span class="text-lg text-gray-500">/month</span></div>
+                    <ul class="features space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>8GB RAM</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Unlimited Player Slots</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>24/7 Premium Support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>24/7 Uptime</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Automatic Backups</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>DDoS Protection</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Free Domain</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-4 rounded-lg transition duration-300">Select Plan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="samp" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">SA-MP Server Hosting</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Reliable SA-MP hosting with custom gamemode support, MySQL databases</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="plan-card bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Bronze Plan</h3>
+                    <div class="price text-4xl font-bold text-gray-900 mb-6">₱100<span class="text-lg text-gray-500">/month</span></div>
+                    <ul class="features space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>50 Player Slots</span>                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>1 MySQL Database</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Basic Support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>99.9% Uptime</span>
+                        </li>
+                        <li class="flex items-center">
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-4 rounded-lg transition duration-300">Select Plan</button>
+                </div>
+                
+                <div class="plan-card bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Silver Plan</h3>
+                    <div class="price text-4xl font-bold text-gray-900 mb-6">₱300<span class="text-lg text-gray-500">/month</span></div>
+                    <ul class="features space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>100 Player Slots</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>3 MySQL Databases</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Priority Support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>99.9% Uptime</span>
+                        </li>
+                        
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>DDoS Protection</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-4 rounded-lg transition duration-300">Select Plan</button>
+                </div>
+                
+                <div class="plan-card bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Gold Plan</h3>
+                    <div class="price text-4xl font-bold text-gray-900 mb-6">₱500<span class="text-lg text-gray-500">/month</span></div>
+                    <ul class="features space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>500 Player Slots</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>10 MySQL Databases</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>24/7 Premium Support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>99.9% Uptime</span>
+                        </li>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>DDoS Protection</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Free SSL Certificate</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-4 rounded-lg transition duration-300">Select Plan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="features" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Our Hosting?</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-item bg-gray-50 rounded-xl p-6 hover:shadow-lg transition duration-300">
+                    <div class="feature-icon bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-bolt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Instant Setup</h3>
+                    <p class="text-gray-600">Your server is ready to play within minutes of purchase.</p>
+                </div>
+                
+                <div class="feature-item bg-gray-50 rounded-xl p-6 hover:shadow-lg transition duration-300">
+                    <div class="feature-icon bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">DDoS Protection</h3>
+                    <p class="text-gray-600">Advanced protection keeps your server online and secure.</p>
+                </div>
+                
+                <div class="feature-item bg-gray-50 rounded-xl p-6 hover:shadow-lg transition duration-300">
+                    <div class="feature-icon bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-hdd text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Automatic Backups</h3>
+                    <p class="text-gray-600">Regular backups ensure your data is always safe.</p>
+                </div>
+                
+                <div class="feature-item bg-gray-50 rounded-xl p-6 hover:shadow-lg transition duration-300">
+                    <div class="feature-icon bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-headset text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">24/7 Support</h3>
+                    <p class="text-gray-600">Our expert team is available around the clock to help you.</p>
+                </div>
+                
+                <div class="feature-item bg-gray-50 rounded-xl p-6 hover:shadow-lg transition duration-300">
+                    <div class="feature-icon bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-sliders-h text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Easy Control Panel</h3>
+                    <p class="text-gray-600">Manage your server with our intuitive control panel.</p>
+                </div>
+                
+        </div>
+    </section>
+    <section class="faq py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="faq-item">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">How quickly is my server set up?</h3>
+                    <p class="text-gray-600">Our servers are typically set up and ready to use within 5-10 minutes of your purchase.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Can I upgrade my plan later?</h3>
+                    <p class="text-gray-600">Yes, you can upgrade your hosting plan at any time without any downtime.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Do you offer refunds?</h3>
+                    <p class="text-gray-600">We offer a 7-day money-back guarantee on all our hosting plans.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Can I install mods and plugins?</h3>
+                    <p class="text-gray-600">Yes, both Minecraft and SA-MP hosting plans support mods and plugins with easy installation.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">What payment methods do you accept?</h3>
+                    <p class="text-gray-600">We accept all major credit cards, PayPal, and cryptocurrency.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Do you provide technical support?</h3>
+                    <p class="text-gray-600">Yes, we offer 24/7 technical support via live chat, email, and ticket system.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="footer-section">
+                    <h3 class="text-xl font-bold mb-4">Nexyn</h3>
+                    <p class="text-gray-400 mb-4">Premium game server hosting for Minecraft and SA-MP with 24/7 support and guaranteed performance.</p>
+                   
+                <div class="footer-section">
+                    <h4 class="font-bold text-lg mb-4">Hosting</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#minecraft" class="text-gray-400 hover:text-white transition duration-300">Minecraft Hosting</a></li>
+                        <li><a href="#samp" class="text-gray-400 hover:text-white transition duration-300">SA-MP Hosting</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white transition duration-300">Pricing</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition duration-300">Features</a></li>
+                    </ul>
+                </div>
+                
+            <div class="footer-bottom border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Nexyn. All rights reserved.</p>
+            </div>
+        </div>
+      </footer>
+ <script src="userAccount.js"></script>
+</body>
+ </html>
